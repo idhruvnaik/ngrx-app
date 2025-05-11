@@ -107,5 +107,8 @@
       }
     }
   },
-  "defaultProject": "ngrx-app"
+  "defaultProject": "ngrx-app",
+  "cli": {
+    "analytics": "a0268783-9ef7-4fe2-9621-063deaf281b0"
+  }
 }
