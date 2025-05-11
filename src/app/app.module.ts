@@ -13,6 +13,7 @@ import { CustomIncrementComponent } from './component/custom-increment/custom-in
 import { FormsModule } from '@angular/forms';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
+import { AppState } from './shared/store/global/app.state';
 
 @NgModule({
   declarations: [
@@ -24,11 +25,14 @@ import { environment } from '../environments/environment';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    StoreModule.forRoot({ counter: counterReducer }, {}),
+    StoreModule.forRoot(AppState),
     BrowserAnimationsModule,
     MaterialModule,
     FormsModule,
-    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
+    StoreDevtoolsModule.instrument({
+      maxAge: 25,
+      logOnly: environment.production,
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent],
