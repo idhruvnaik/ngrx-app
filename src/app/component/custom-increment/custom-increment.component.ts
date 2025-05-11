@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { customIncrement } from 'src/app/shared/store/counter.action';
+import { CounterModel } from 'src/app/shared/store/counter.model';
 
 @Component({
   selector: 'app-custom-increment',
@@ -8,7 +9,7 @@ import { customIncrement } from 'src/app/shared/store/counter.action';
   styleUrls: ['./custom-increment.component.scss'],
 })
 export class CustomIncrementComponent {
-  constructor(private store: Store<{ counter: { counter: number } }>) {}
+  constructor(private store: Store<{ counter: CounterModel }>) {}
   counterInput!: number;
   actionType = 'add';
 

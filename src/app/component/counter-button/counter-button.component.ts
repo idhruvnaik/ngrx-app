@@ -5,6 +5,7 @@ import {
   increment,
   reset,
 } from 'src/app/shared/store/counter.action';
+import { CounterModel } from 'src/app/shared/store/counter.model';
 
 @Component({
   selector: 'app-counter-button',
@@ -12,7 +13,7 @@ import {
   styleUrls: ['./counter-button.component.scss'],
 })
 export class CounterButtonComponent {
-  constructor(private store: Store<{ counter: { counter: Number } }>) {}
+  constructor(private store: Store<{ counter: CounterModel }>) {}
 
   onIncrement() {
     this.store.dispatch(increment());
