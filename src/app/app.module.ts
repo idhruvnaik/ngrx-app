@@ -14,6 +14,7 @@ import { FormsModule } from '@angular/forms';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
 import { AppState } from './shared/store/global/app.state';
+import { BlogComponent } from './component/blog/blog.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { AppState } from './shared/store/global/app.state';
     CounterButtonComponent,
     CounterDisplayComponent,
     CustomIncrementComponent,
+    BlogComponent,
   ],
   imports: [
     BrowserModule,

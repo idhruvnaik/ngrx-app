@@ -1,6 +1,7 @@
 <router-outlet></router-outlet>
-<div style="text-align: center">
-  <app-counter-button></app-counter-button>
-  <app-counter-display></app-counter-display>
-  <app-custom-increment></app-custom-increment>
-</div>
+<nav style="margin-bottom: 20px">
+  <a routerLink="/counter" routerLinkActive="active">Counter</a> |
+  <a routerLink="/blog" routerLinkActive="active">Blog</a>
+</nav>
+
+<router-outlet></router-outlet>
